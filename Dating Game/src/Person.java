@@ -8,8 +8,9 @@ public class Person
 	private String eyeColor;
 	private String livingPreference;
 	private String favoriteHobby;
+	private int matches;
 	
-	public Person(String aa, int a, int b, int c, String d, String e, String f, String g)
+	public Person(String aa, int a, int b, int c, String d, String e, String f, String g, int h)
 		{
 		name = aa;
 		age = a;
@@ -20,7 +21,7 @@ public class Person
 		livingPreference = f;
 		favoriteHobby = g;
 		}
-	
+
 	public String getName()
 		{
 		return name;
@@ -99,6 +100,16 @@ public class Person
 	public void setFavoriteHobby(String favoriteHobby)
 		{
 		this.favoriteHobby = favoriteHobby;
+		}
+	
+	public int getMatches()
+		{
+			return matches;
+		}
+
+	public void setMatches(int matches)
+		{
+			this.matches = matches;
 		}
 	
 	}
