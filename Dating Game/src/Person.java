@@ -20,6 +20,7 @@ public class Person
 		eyeColor = e;
 		livingPreference = f;
 		favoriteHobby = g;
+		matches = h;
 		}
 
 	public String getName()

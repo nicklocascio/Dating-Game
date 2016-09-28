@@ -51,14 +51,14 @@ public class PersonRunner
 //			}
 		
 		// Gender
-//		Scanner userInput = new Scanner(System.in);
-//		System.out.println("Are you interested in men or women?");
-//		String gender = userInput.nextLine();
-//		if(gender.equals("Men"))
-//			{
-//			// FIGURE OUT REMOVING MEN OR WOMEN
-//			System.out.println("You are interested in men. Let's play!");
-//			}
+		Scanner userInput = new Scanner(System.in);
+		System.out.println("Are you interested in men or women?");
+		String gender = userInput.nextLine();
+		if(gender.equals("Men"))
+			{
+			System.out.println("You are interested in men. Let's play!");
+			MaleMatchmaking();
+			}
 //		else if(gender.equals("Women"))
 //			{
 //			System.out.println("You are interested in women. Let's play!");
@@ -135,7 +135,64 @@ public class PersonRunner
 			}
 		
 		// Eye Color
-
+		Scanner userInput6 = new Scanner(System.in);
+		System.out.println("Do you prefer brown, blue, or green eyes?");
+		String eyeColor = userInput6.nextLine();
+		if(eyeColor.equals("Brown"))
+			{
+			malePeople.get(0).setMatches(malePeople.get(0).getMatches()+1);
+			malePeople.get(3).setMatches(malePeople.get(3).getMatches()+1);
+			}
+		else if(eyeColor.equals("Blue"))
+			{
+			malePeople.get(1).setMatches(malePeople.get(1).getMatches()+1);
+			malePeople.get(4).setMatches(malePeople.get(4).getMatches()+1);
+			}
+		else if(eyeColor.equals("Green"))
+			{
+			malePeople.get(2).setMatches(malePeople.get(2).getMatches()+1);
+			}
+		
+		// Living Preference
+		Scanner userInput7 = new Scanner(System.in);
+		System.out.println("Would you rather live in the mountains, ocean, city, or countryside?");
+		String livingPreference = userInput7.nextLine();
+		if(livingPreference.equals("Mountains"))
+			{
+			malePeople.get(0).setMatches(malePeople.get(0).getMatches()+1);
+			malePeople.get(4).setMatches(malePeople.get(4).getMatches()+1);
+			}
+		else if(livingPreference.equals("Ocean"))
+			{
+			malePeople.get(2).setMatches(malePeople.get(2).getMatches()+1);
+			}
+		else if(livingPreference.equals("City"))
+			{
+			malePeople.get(1).setMatches(malePeople.get(1).getMatches()+1);	
+			}
+		else if(livingPreference.equals("Countryside"))
+			{
+			malePeople.get(3).setMatches(malePeople.get(3).getMatches()+1);	
+			}
+		
+		// Hobby Preference
+		Scanner userInput8 = new Scanner(System.in);
+		System.out.println("Would you rather do things indoors or outdoors?");
+		String hobbyPreference = userInput8.nextLine();
+		if(hobbyPreference.equals("Indoors"))
+			{
+			malePeople.get(1).setMatches(malePeople.get(1).getMatches()+1);
+			malePeople.get(3).setMatches(malePeople.get(3).getMatches()+1);
+			}
+		else if(hobbyPreference.equals("Outdoors"))
+			{
+			malePeople.get(0).setMatches(malePeople.get(0).getMatches()+1);
+			malePeople.get(2).setMatches(malePeople.get(2).getMatches()+1);
+			malePeople.get(4).setMatches(malePeople.get(4).getMatches()+1);
+			}
+		
+		// Matchmaking
+		// Figure out how to traverse an arraylist and get greatest value
 		}
 	}
 	
