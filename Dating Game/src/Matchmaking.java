@@ -37,8 +37,49 @@ public class Matchmaking
 			malePeople.get(3).setMatches(malePeople.get(3).getMatches()+1);
 			}
 		// Height
-//		Scanner userInput3 = new Scanner(System.in);
-//		System.out.println("What height would you like your partner to be?");
+		Scanner userInput3 = new Scanner(System.in);
+		System.out.println("What height would you like your partner to be?");
+		String height = userInput3.nextLine();
+		if(height.length() == 3)
+			{
+			int feet = Integer.parseInt(height.split("'")[0]) * 12;
+			int inches = Integer.parseInt(height.substring(2));
+			int totalHeight = feet + inches;
+			if(totalHeight < 60)
+				{
+				malePeople.get(0).setMatches(malePeople.get(0).getMatches()+1);
+				}
+			else if(totalHeight > 60 && totalHeight < 72 )
+				{
+				malePeople.get(1).setMatches(malePeople.get(1).getMatches()+1);
+				malePeople.get(2).setMatches(malePeople.get(2).getMatches()+1);
+				}
+			else if(totalHeight > 72)
+				{
+				malePeople.get(3).setMatches(malePeople.get(3).getMatches()+1);
+				malePeople.get(4).setMatches(malePeople.get(4).getMatches()+1);
+				}
+			}
+		else if(height.length() == 4)
+			{
+			int feet = Integer.parseInt(height.split("'")[0]) * 12;
+			int inches = Integer.parseInt(height.substring(2, 4));
+			int totalHeight = feet + inches;
+			if(totalHeight < 60)
+				{
+				malePeople.get(0).setMatches(malePeople.get(0).getMatches()+1);
+				}
+			else if(totalHeight > 60 && totalHeight < 72 )
+				{
+				malePeople.get(1).setMatches(malePeople.get(1).getMatches()+1);
+				malePeople.get(2).setMatches(malePeople.get(2).getMatches()+1);
+				}
+			else if(totalHeight > 72)
+				{
+				malePeople.get(3).setMatches(malePeople.get(3).getMatches()+1);
+				malePeople.get(4).setMatches(malePeople.get(4).getMatches()+1);
+				}
+			}		
 		
 		// IQ
 		Scanner userInput4 = new Scanner(System.in);
@@ -144,35 +185,35 @@ public class Matchmaking
 		   malePeople.get(0).getMatches() > malePeople.get(3).getMatches() ||
 		   malePeople.get(0).getMatches() > malePeople.get(4).getMatches())
 			{
-			System.out.println(malePeople.get(0).getName());
+			System.out.println("You had " + malePeople.get(0).getMatches() +  " matches with " + malePeople.get(0).getName() + ". Would you like more information?");
 			}
 		else if(malePeople.get(1).getMatches() > malePeople.get(0).getMatches() ||
 				malePeople.get(1).getMatches() > malePeople.get(2).getMatches() ||
 				malePeople.get(1).getMatches() > malePeople.get(3).getMatches() ||
 				malePeople.get(1).getMatches() > malePeople.get(4).getMatches()) 
 			{
-			System.out.println(malePeople.get(1).getName());
+			System.out.println("You had " + malePeople.get(1).getMatches() +  " matches with " + malePeople.get(1).getName() + ". Would you like more information?");
 			}
 		else if(malePeople.get(2).getMatches() > malePeople.get(0).getMatches() ||
 				malePeople.get(2).getMatches() > malePeople.get(1).getMatches() ||
 				malePeople.get(2).getMatches() > malePeople.get(3).getMatches() ||
 				malePeople.get(2).getMatches() > malePeople.get(4).getMatches())
 			{
-			System.out.println(malePeople.get(2).getName());
+			System.out.println("You had " + malePeople.get(2).getMatches() +  " matches with " + malePeople.get(2).getName() + ". Would you like more information?");
 			}
 		else if(malePeople.get(3).getMatches() > malePeople.get(0).getMatches() ||
 				malePeople.get(3).getMatches() > malePeople.get(1).getMatches() ||
  				malePeople.get(3).getMatches() > malePeople.get(2).getMatches() ||
 				malePeople.get(3).getMatches() > malePeople.get(4).getMatches())
 			{
-			System.out.println(malePeople.get(3).getName());
+			System.out.println("You had " + malePeople.get(3).getMatches() +  " matches with " + malePeople.get(3).getName() + ". Would you like more information?");
 			}
 		else if(malePeople.get(4).getMatches() > malePeople.get(0).getMatches() ||
 				malePeople.get(4).getMatches() > malePeople.get(1).getMatches() ||
 				malePeople.get(4).getMatches() > malePeople.get(2).getMatches() ||
 				malePeople.get(4).getMatches() > malePeople.get(3).getMatches())
 			{
-			System.out.println(malePeople.get(4).getName());
+			System.out.println("You had " + malePeople.get(4).getMatches() +  " matches with " + malePeople.get(4).getName() + ". Would you like more information?");
 			}
 		}
 	
@@ -181,10 +222,10 @@ public class Matchmaking
 	public static void FemaleMatchmaking()
 		{	
 		femalePeople.add(new Person("Sophia", 22, 54, 70, "Brown", "Brown", "Mountains", "Outdoors", 0)); //0 
-		femalePeople.add(new Person("Katie", 31, 68, 90, "Blonde", "Blue", "City", "Indoors", 0)); //1
-		femalePeople.add(new Person("Stephanie", 27, 70, 105, "Black", "Green", "Ocean", "Outdoors", 0)); //2
-		femalePeople.add(new Person("Claire", 42, 74, 122, "Brown", "Brown", "Countryside", "Indoors", 0)); //3
-		femalePeople.add(new Person("Lily", 36, 84, 60, "Red", "Blue", "Mountains", "Outdoors", 0)); //4
+		femalePeople.add(new Person("Katie", 31, 60, 90, "Blonde", "Blue", "City", "Indoors", 0)); //1
+		femalePeople.add(new Person("Stephanie", 65, 70, 105, "Black", "Green", "Ocean", "Outdoors", 0)); //2
+		femalePeople.add(new Person("Claire", 42, 68, 122, "Brown", "Brown", "Countryside", "Indoors", 0)); //3
+		femalePeople.add(new Person("Lily", 36, 73, 60, "Red", "Blue", "Mountains", "Outdoors", 0)); //4
 		
 		// Age
 		Scanner userInput2 = new Scanner(System.in);
@@ -208,9 +249,51 @@ public class Matchmaking
 			{
 			femalePeople.get(3).setMatches(femalePeople.get(3).getMatches()+1);
 			}
+		
 		// Height
-//		Scanner userInput3 = new Scanner(System.in);
-//		System.out.println("What height would you like your partner to be?");
+		Scanner userInput3 = new Scanner(System.in);
+		System.out.println("What height would you like your partner to be?");
+		String height = userInput3.nextLine();
+		if(height.length() == 3)
+			{
+			int feet = Integer.parseInt(height.split("'")[0]) * 12;
+			int inches = Integer.parseInt(height.substring(2));
+			int totalHeight = feet + inches;
+			if(totalHeight < 60)
+				{
+				femalePeople.get(0).setMatches(femalePeople.get(0).getMatches()+1);
+				}
+			else if(totalHeight > 60 && totalHeight < 72 )
+				{
+				femalePeople.get(1).setMatches(femalePeople.get(1).getMatches()+1);
+				femalePeople.get(2).setMatches(femalePeople.get(2).getMatches()+1);
+				femalePeople.get(3).setMatches(femalePeople.get(3).getMatches()+1);
+				}
+			else if(totalHeight > 72)
+				{				
+				femalePeople.get(4).setMatches(femalePeople.get(4).getMatches()+1);
+				}
+			}
+		else if(height.length() == 4)
+			{
+			int feet = Integer.parseInt(height.split("'")[0]) * 12;
+			int inches = Integer.parseInt(height.substring(2, 4));
+			int totalHeight = feet + inches;
+			if(totalHeight < 60)
+				{
+				femalePeople.get(0).setMatches(femalePeople.get(0).getMatches()+1);
+				}
+			else if(totalHeight > 60 && totalHeight < 72 )
+				{
+				femalePeople.get(1).setMatches(femalePeople.get(1).getMatches()+1);
+				femalePeople.get(2).setMatches(femalePeople.get(2).getMatches()+1);
+				femalePeople.get(3).setMatches(femalePeople.get(3).getMatches()+1);
+				}
+			else if(totalHeight > 72)
+				{
+				femalePeople.get(4).setMatches(femalePeople.get(4).getMatches()+1);
+				}
+			}		
 		
 		// IQ
 		Scanner userInput4 = new Scanner(System.in);
@@ -316,35 +399,85 @@ public class Matchmaking
 			femalePeople.get(0).getMatches() > femalePeople.get(3).getMatches() ||
 			femalePeople.get(0).getMatches() > femalePeople.get(4).getMatches())
 			{
-			System.out.println(femalePeople.get(0).getName());
+			Scanner match = new Scanner(System.in);
+			System.out.println("You had " + femalePeople.get(0).getMatches() +  " matches with " + femalePeople.get(0).getName() + ". Would you like more information?");
+			String yesOrNo = match.nextLine();
+			if(yesOrNo.equals("Yes"))
+				{
+				MatchMade.moreInfoSophia();
+				}
+			else if(yesOrNo.equals("No"))
+				{
+				System.out.println("Alright if you say so. Bye!");
+				}
 			}
 		else if(femalePeople.get(1).getMatches() > femalePeople.get(0).getMatches() ||
 				femalePeople.get(1).getMatches() > femalePeople.get(2).getMatches() ||
 				femalePeople.get(1).getMatches() > femalePeople.get(3).getMatches() ||
 				femalePeople.get(1).getMatches() > femalePeople.get(4).getMatches()) 
 			{
-			System.out.println(femalePeople.get(1).getName());
+			Scanner match = new Scanner(System.in);
+			System.out.println("You had " + femalePeople.get(1).getMatches() +  " matches with " + femalePeople.get(1).getName() + ". Would you like more information?");
+			String yesOrNo = match.nextLine();
+			if(yesOrNo.equals("Yes"))
+				{
+				MatchMade.moreInfoKatie();
+				}
+			else if(yesOrNo.equals("No"))
+				{
+				System.out.println("Alright if you say so. Bye!");
+				}
 			}
 		else if(femalePeople.get(2).getMatches() > femalePeople.get(0).getMatches() ||
 				femalePeople.get(2).getMatches() > femalePeople.get(1).getMatches() ||
 				femalePeople.get(2).getMatches() > femalePeople.get(3).getMatches() ||
 				femalePeople.get(2).getMatches() > femalePeople.get(4).getMatches())
 			{
-			System.out.println(femalePeople.get(2).getName());
+			Scanner match = new Scanner(System.in);
+			System.out.println("You had " + femalePeople.get(2).getMatches() +  " matches with " + femalePeople.get(2).getName() + ". Would you like more information?");
+			String yesOrNo = match.nextLine();
+			if(yesOrNo.equals("Yes"))
+				{
+				MatchMade.moreInfoStephanie();
+				}
+			else if(yesOrNo.equals("No"))
+				{
+				System.out.println("Alright if you say so. Bye!");
+				}
 			}
 		else if(femalePeople.get(3).getMatches() > femalePeople.get(0).getMatches() ||
 				femalePeople.get(3).getMatches() > femalePeople.get(1).getMatches() ||
 				femalePeople.get(3).getMatches() > femalePeople.get(2).getMatches() ||
 				femalePeople.get(3).getMatches() > femalePeople.get(4).getMatches())
 			{
-			System.out.println(femalePeople.get(3).getName());
+			Scanner match = new Scanner(System.in);
+			System.out.println("You had " + femalePeople.get(3).getMatches() +  " matches with " + femalePeople.get(3).getName() + ". Would you like more information?");
+			String yesOrNo = match.nextLine();
+			if(yesOrNo.equals("Yes"))
+				{
+				MatchMade.moreInfoClaire();
+				}
+			else if(yesOrNo.equals("No"))
+				{
+				System.out.println("Alright if you say so. Bye!");
+				}
 			}
 		else if(femalePeople.get(4).getMatches() > femalePeople.get(0).getMatches() ||
 				femalePeople.get(4).getMatches() > femalePeople.get(1).getMatches() ||
 				femalePeople.get(4).getMatches() > femalePeople.get(2).getMatches() ||
 				femalePeople.get(4).getMatches() > femalePeople.get(3).getMatches())
 			{
-			System.out.println(femalePeople.get(4).getName());
+			Scanner match = new Scanner(System.in);
+			System.out.println("You had " + femalePeople.get(4).getMatches() +  " matches with " + femalePeople.get(4).getName() + ". Would you like more information?");
+			String yesOrNo = match.nextLine();
+			if(yesOrNo.equals("Yes"))
+				{
+				MatchMade.moreInfoLily();
+				}
+			else if(yesOrNo.equals("No"))
+				{
+				System.out.println("Alright if you say so. Bye!");
+				}
 			}
 		}
 	}
