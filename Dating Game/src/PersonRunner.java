@@ -21,20 +21,20 @@ public class PersonRunner
 	public static void main(String[] args)
 		{			
 		// Intro
-//		System.out.println("Hello and welcome to the dating extravaganza!");
-//		delay();
-//		Scanner confirmation = new Scanner(System.in);
-//		System.out.println("Are you at least 20 years of age?");
-//		String confirmed = confirmation.nextLine();
-//		if(confirmed.equals("Yes"))
-//			{
-//			System.out.println("Get ready to find your soul mate!");
-//			delay();
-//			}
-//		else if(confirmed.equals("No"))
-//			{
-//			System.out.println("Bye bye!");
-//			}
+		System.out.println("Hello and welcome to the dating extravaganza!");
+		delay();
+		Scanner confirmation = new Scanner(System.in);
+		System.out.println("Are you at least 20 years of age?");
+		String confirmed = confirmation.nextLine();
+		if(confirmed.equals("Yes"))
+			{
+			System.out.println("Get ready to find your soul mate!");
+			delay();
+			}
+		else if(confirmed.equals("No"))
+			{
+			System.out.println("Bye bye!");
+			}
 		
 		// Gender
 		Scanner userInput = new Scanner(System.in);
