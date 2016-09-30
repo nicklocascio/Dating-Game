@@ -5,6 +5,7 @@ public class Matchmaking
 	{		
 	static ArrayList <Person> malePeople = new ArrayList <Person>();
 	static ArrayList <Person> femalePeople = new ArrayList <Person>();
+	static String height;
 	
 	public static void MaleMatchmaking()
 		{		
@@ -39,7 +40,7 @@ public class Matchmaking
 		// Height
 		Scanner userInput3 = new Scanner(System.in);
 		System.out.println("What height would you like your partner to be?");
-		String height = userInput3.nextLine();
+		height = userInput3.nextLine();
 		if(height.length() == 3)
 			{
 			int feet = Integer.parseInt(height.split("'")[0]) * 12;
@@ -185,35 +186,85 @@ public class Matchmaking
 		   malePeople.get(0).getMatches() > malePeople.get(3).getMatches() ||
 		   malePeople.get(0).getMatches() > malePeople.get(4).getMatches())
 			{
+			Scanner match = new Scanner(System.in);
 			System.out.println("You had " + malePeople.get(0).getMatches() +  " matches with " + malePeople.get(0).getName() + ". Would you like more information?");
+			String yesOrNo = match.nextLine();
+			if(yesOrNo.equals("Yes"))
+				{
+				MatchMade.moreInfoMike();
+				}
+			else if(yesOrNo.equals("No"))
+				{
+				System.out.println("Alright if you say so. Bye!");
+				}
 			}
 		else if(malePeople.get(1).getMatches() > malePeople.get(0).getMatches() ||
 				malePeople.get(1).getMatches() > malePeople.get(2).getMatches() ||
 				malePeople.get(1).getMatches() > malePeople.get(3).getMatches() ||
 				malePeople.get(1).getMatches() > malePeople.get(4).getMatches()) 
 			{
+			Scanner match = new Scanner(System.in);
 			System.out.println("You had " + malePeople.get(1).getMatches() +  " matches with " + malePeople.get(1).getName() + ". Would you like more information?");
+			String yesOrNo = match.nextLine();
+			if(yesOrNo.equals("Yes"))
+				{
+				MatchMade.moreInfoJeff();;
+				}
+			else if(yesOrNo.equals("No"))
+				{
+				System.out.println("Alright if you say so. Bye!");
+				}
 			}
 		else if(malePeople.get(2).getMatches() > malePeople.get(0).getMatches() ||
 				malePeople.get(2).getMatches() > malePeople.get(1).getMatches() ||
 				malePeople.get(2).getMatches() > malePeople.get(3).getMatches() ||
 				malePeople.get(2).getMatches() > malePeople.get(4).getMatches())
 			{
+			Scanner match = new Scanner(System.in);
 			System.out.println("You had " + malePeople.get(2).getMatches() +  " matches with " + malePeople.get(2).getName() + ". Would you like more information?");
+			String yesOrNo = match.nextLine();
+			if(yesOrNo.equals("Yes"))
+				{
+				MatchMade.moreInfoMark();
+				}
+			else if(yesOrNo.equals("No"))
+				{
+				System.out.println("Alright if you say so. Bye!");
+				}
 			}
 		else if(malePeople.get(3).getMatches() > malePeople.get(0).getMatches() ||
 				malePeople.get(3).getMatches() > malePeople.get(1).getMatches() ||
  				malePeople.get(3).getMatches() > malePeople.get(2).getMatches() ||
 				malePeople.get(3).getMatches() > malePeople.get(4).getMatches())
 			{
+			Scanner match = new Scanner(System.in);
 			System.out.println("You had " + malePeople.get(3).getMatches() +  " matches with " + malePeople.get(3).getName() + ". Would you like more information?");
+			String yesOrNo = match.nextLine();
+			if(yesOrNo.equals("Yes"))
+				{
+				MatchMade.moreInfoRick();
+				}
+			else if(yesOrNo.equals("No"))
+				{
+				System.out.println("Alright if you say so. Bye!");
+				}
 			}
 		else if(malePeople.get(4).getMatches() > malePeople.get(0).getMatches() ||
 				malePeople.get(4).getMatches() > malePeople.get(1).getMatches() ||
 				malePeople.get(4).getMatches() > malePeople.get(2).getMatches() ||
 				malePeople.get(4).getMatches() > malePeople.get(3).getMatches())
 			{
+			Scanner match = new Scanner(System.in);
 			System.out.println("You had " + malePeople.get(4).getMatches() +  " matches with " + malePeople.get(4).getName() + ". Would you like more information?");
+			String yesOrNo = match.nextLine();
+			if(yesOrNo.equals("Yes"))
+				{
+				MatchMade.moreInfoSteven();
+				}
+			else if(yesOrNo.equals("No"))
+				{
+				System.out.println("Alright if you say so. Bye!");
+				}
 			}
 		}
 	
@@ -253,7 +304,7 @@ public class Matchmaking
 		// Height
 		Scanner userInput3 = new Scanner(System.in);
 		System.out.println("What height would you like your partner to be?");
-		String height = userInput3.nextLine();
+		height = userInput3.nextLine();
 		if(height.length() == 3)
 			{
 			int feet = Integer.parseInt(height.split("'")[0]) * 12;
